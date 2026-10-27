@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wicking bed fija</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/loho01.jpg" alt="">
+                <span>Wicking bed</span>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                <span aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#Producto">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="producto-detalle">
+        <h1>Wicking Bed fija</h1>
+        <div class="producto-fija-media">
+            <section class="wicking-carousel" aria-label="Fotos de la wicking bed fija">
+                <div class="wicking-carousel-track">
+                    <img src="imagenes/wiki4.jpeg" alt="Wicking bed fija">
+                    <img src="imagenes/wiki5.jpeg" alt="Wicking bed fija">
+                    <img src="imagenes/wiki3.jpeg" alt="Wicking bed fija">
+                    <img src="imagenes/wiki2.jpeg" alt="Wicking bed fija">
+                    <img src="imagenes/wiki1.jpeg" alt="Wicking bed fija">
+                </div>
+                <button class="wicking-carousel-button wicking-carousel-previous" type="button" aria-label="Ver imagen anterior">&#10094;</button>
+                <button class="wicking-carousel-button wicking-carousel-next" type="button" aria-label="Ver imagen siguiente">&#10095;</button>
+                <span class="wicking-carousel-status" aria-live="polite"></span>
+            </section>
+            <p class="precio">$300.000.000</p>
+            <a class="volver" href="index.html#Producto">Volver a productos</a>
+        </div>
+        <div class="producto-fija-descripcion">
+            <p>
+DESCRIPCIÓN
+
+La base es una bañera de 1m x 40 cm y 40 cm de profundidad.</p>
+            <p>
+
+PARTE SUPERIOR: Zona cultivable, se encuentra el sustrato. Tiene un techo de chapa transparente de plástico, con marco de madera, cuenta con dos patitas de apoyo de madera que sirven como sostén cuando se quiere dejar la tapa abierta.
+
+PARTE MEDIA: Como maya divisoria tiene una media sombra negra. En la parte exterior tiene una canilla de plástico de nivelación, que al igual que con la Wicking portable, demarca un límite de carga.
+</p>
+            <p>
+PARTE INFERIOR: El sistema de cañería es sencillo, el tubo de carga es la unión de dos tubos PVC de ¼  de 1 pulgada, que forman un único tubo en forma de L. Para el desagüe se colocó conectado a la rejilla de la bañera, un caño subterráneo que sale a la superficie y se extiende 1,6 m para redirigir el agua. 
+
+El interior de esta zona está lleno de piedras, mientras que en el exterior, se construyeron paredes de aislamiento térmico, primero dándole estructura con tablones de madera para luego recubrirlo con un revoque de barro.
+
+</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; E.E.S.A nº1 de Hurlingham. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const carousel = document.querySelector(".wicking-carousel");
+        const track = carousel.querySelector(".wicking-carousel-track");
+        const slides = track.querySelectorAll("img");
+        const status = carousel.querySelector(".wicking-carousel-status");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            track.style.transform = `translateX(-${currentSlide * (100 / slides.length)}%)`;
+            status.textContent = `Imagen ${currentSlide + 1} de ${slides.length}`;
+        }
+
+        carousel.querySelector(".wicking-carousel-previous")
+            .addEventListener("click", () => showSlide(currentSlide - 1));
+        carousel.querySelector(".wicking-carousel-next")
+            .addEventListener("click", () => showSlide(currentSlide + 1));
+        showSlide(currentSlide);
+    </script>
+    <script src="menu.js" defer></script>
+</body>
+</html>

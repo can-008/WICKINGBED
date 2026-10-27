@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-image: url('imagenes/fondoxd.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transform: translateY(-4px);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2d2d2d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 430px) {
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0.5rem 0;
+        gap: 0.25rem;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .nav-toggle {
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-left: auto;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background: #fff;
+        color: #333;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        transition: transform 0.2s ease;
+    }
+
+    .nav-toggle[aria-expanded="true"] span {
+        transform: rotate(180deg);
+    }
+}
