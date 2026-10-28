@@ -86,6 +86,15 @@
     object-fit: cover;
 }
 
+.producto-subterranea-media .wicking-carousel-track {
+    width: 300%;
+}
+
+.producto-subterranea-media .wicking-carousel img {
+    flex-basis: 33.3333%;
+    width: 33.3333%;
+}
+
 .wicking-carousel-button {
     position: absolute;
     top: 50%;

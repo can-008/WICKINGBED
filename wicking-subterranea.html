@@ -26,7 +26,16 @@
     <main class="producto-detalle">
         <h1>Wicking Bed subterránea</h1>
         <div class="producto-subterranea-media">
-            <img src="imagenes/gojo (1).jpeg" alt="Wicking bed subterránea">
+            <section class="wicking-carousel" aria-label="Fotos de la wicking bed subterránea">
+                <div class="wicking-carousel-track">
+                    <img src="imagenes/wickisub.1.jpeg" alt="Wicking bed subterránea, imagen 1">
+                    <img src="imagenes/wikisub.2.jpeg" alt="Wicking bed subterránea, imagen 2">
+                    <img src="imagenes/wikisub.3.jpeg" alt="Wicking bed subterránea, imagen 3">
+                </div>
+                <button class="wicking-carousel-button wicking-carousel-previous" type="button" aria-label="Ver imagen anterior">&#10094;</button>
+                <button class="wicking-carousel-button wicking-carousel-next" type="button" aria-label="Ver imagen siguiente">&#10095;</button>
+                <span class="wicking-carousel-status" aria-live="polite"></span>
+            </section>
             <p class="precio">$500.000.000</p>
             <a class="volver" href="index.html#Producto">Volver a productos</a>
         </div>
@@ -51,6 +60,25 @@ PARTE INFERIOR: el sistema de tubería consta de un caño de carga PVC de media 
     <footer>
         <p>&copy; E.E.S.A nº1 de Hurlingham. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        const carousel = document.querySelector(".wicking-carousel");
+        const track = carousel.querySelector(".wicking-carousel-track");
+        const slides = track.querySelectorAll("img");
+        const status = carousel.querySelector(".wicking-carousel-status");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            track.style.transform = `translateX(-${currentSlide * (100 / slides.length)}%)`;
+            status.textContent = `Imagen ${currentSlide + 1} de ${slides.length}`;
+        }
+
+        carousel.querySelector(".wicking-carousel-previous")
+            .addEventListener("click", () => showSlide(currentSlide - 1));
+        carousel.querySelector(".wicking-carousel-next")
+            .addEventListener("click", () => showSlide(currentSlide + 1));
+        showSlide(currentSlide);
+    </script>
     <script src="menu.js" defer></script>
 </body>
 </html>
