@@ -44,6 +44,13 @@
     margin-top: 1rem;
 }
 
+.producto-portable-media .producto-costos,
+.producto-fija-media .producto-costos,
+.producto-subterranea-media .producto-costos {
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
 .producto-portable-descripcion > p:not(.precio),
 .producto-fija-descripcion > p:not(.precio),
 .producto-subterranea-descripcion > p:not(.precio) {

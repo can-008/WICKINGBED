@@ -99,6 +99,10 @@ section[id] {
     font-weight: bold;
 }
 
+.Producto-card .producto-costos {
+    margin: 0.75rem 1.5rem;
+}
+
 .Producto-card .descripción {
     padding: 0 1.5rem;
     line-height: 1.7;
