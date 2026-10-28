@@ -69,7 +69,7 @@ section[id] {
 }
 
 .Producto-card {
-    background-color: hsla(96, 100%, 95%, 0.767);
+    background-color: rgba(205, 250, 191, 0.85);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.205);
@@ -138,7 +138,7 @@ section[id] {
     margin: 6rem auto 1rem;
     padding: 0.9rem 9rem;
     color: #666;
-    background-color:  rgba(205, 250, 191, 0.85);
+    background-color: hsla(96, 100%, 95%, 0.767);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
