@@ -2,6 +2,26 @@ section[id] {
     scroll-margin-top: 100px;
 }
 
+.nav-links a[href="#Producto"],
+.nav-links a[href="#Descripción"],
+.nav-links a[href="#Uso"],
+.nav-links a[href="#Contacto"] {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    background-color: hsl(267, 40%, 74%);
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a[href="#Producto"]:hover,
+.nav-links a[href="#Descripción"]:hover,
+.nav-links a[href="#Uso"]:hover,
+.nav-links a[href="#Contacto"]:hover {
+    background-color: rgb(198, 238, 206);
+}
+
 #hero {
     padding-top: 2rem;
     min-height: 100vh;
