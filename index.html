@@ -132,10 +132,11 @@ Si te interesa, ¡También te contamos cómo hacerlo!
         </section>
         <section id="Contacto">
             <h2>contacto</h2>
-            <form>
-                <input type="text"placeholder="Nombre"required>
-                <input type="email"placeholder="Email"required>
-                <textarea placeholder="mensaje" required></textarea>
+            <form action="https://formsubmit.co/candela.ramirez080@gmail.com" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde Wicking bed">
                 <button type="submit">enviar</button>
             </form>
         </section>
